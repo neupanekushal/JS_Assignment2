@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>document</title>
+  </head>
+  <body>
+    <div class="header"></div>
+    <section id="container">
+      <ul>
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li class="third">Three</li>
+      </ul>
+
+      <ol>
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li class="third">Three</li>
+      </ol>
+    </section>
+    <div class="footer"></div>
+    <button onclick="toggleDiv">press to toggle</button>
+    <div id="container">toggle on click</div>
+    <script>
+      // Question 1
+      function selectSection() {
+        element = document.getElementById("container");
+        //element = document.querySelector("#container");
+        return element;
+      }
+      console.log(selectSection());
+
+      // Question 2
+
+      function selectList() {
+        element1 = document.getElementsByClassName("second");
+        //element1 = document.querySelector(".second");
+        return element1;
+      }
+      console.log(selectList());
+
+      // Question 3
+
+      function listThird() {
+        element2 = document.querySelector("ol").querySelector(".third");
+
+        return element2;
+      }
+
+      console.log(listThird());
+
+      // Question 4
+
+      function textHello() {
+        element3 = document.querySelector("#container");
+        element3.innerText = "Hello";
+        return element3;
+      }
+      // console.log(textHello());
+
+      //Question 5
+      function createElement() {
+        let element4 = document.querySelector("ul");
+        newList = document.createElement("li");
+        newList.innerHTML = "fourth";
+        element4.appendChild(newList);
+      }
+      createElement();
+
+      // Question 6
+
+      function background() {
+        element5 = document.querySelector("ol");
+        element5.style.backgroundColor = "green";
+      }
+      background();
+
+      // Question 7
+
+      element6 = document.querySelector(".footer");
+      element6.remove;
+
+      // Question 8
+      element7 = document.querySelector(".footer");
+      element7.classList.add("main");
+
+      // question 9
+
+      element8 = document.queryCommandValue(".maim");
+      element.classList.remove("main");
+
+      //Question 10
+
+      function toggleDiv() {
+        element9 = document.querySelector(".header");
+        element9.classList.toggle();
+      }
+    </script>
+  </body>
+</html>
